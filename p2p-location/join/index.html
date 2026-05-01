@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P2P Location</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f1e7;
+      --panel: #fffdf9;
+      --text: #1e1d1a;
+      --muted: #6a655c;
+      --accent: #0b6e4f;
+      --border: #d8d1c3;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background:
+        radial-gradient(circle at top, rgba(11, 110, 79, 0.10), transparent 32%),
+        linear-gradient(180deg, #f9f6ef 0%, var(--bg) 100%);
+      color: var(--text);
+      font: 16px/1.5 Georgia, serif;
+    }
+
+    main {
+      width: min(100%, 480px);
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 18px 50px rgba(35, 30, 20, 0.08);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 2.6rem);
+      line-height: 1;
+    }
+
+    p {
+      margin: 14px 0 0;
+      color: var(--muted);
+    }
+
+    .code {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: #f1fbf6;
+      color: #124733;
+      font-family: "SFMono-Regular", Consolas, monospace;
+    }
+
+    .actions {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Open In App</h1>
+  <p>Install P2P Location to continue. This page is only a fallback when the app is not available.</p>
+  <div id="code" class="code" hidden></div>
+  <div class="actions">
+    <a class="button primary" href="#" id="open-app">Open App</a>
+    <a class="button" href="#" id="install-app">Get The App</a>
+  </div>
+</main>
+
+<script>
+  const codeElement = document.getElementById("code");
+  const openAppLink = document.getElementById("open-app");
+  const installAppLink = document.getElementById("install-app");
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get("code")?.trim() || "";
+
+  document.body.dataset.joinCode = code;
+
+  if (code) {
+    codeElement.hidden = false;
+    codeElement.textContent = "Join code: " + code;
+  }
+
+  openAppLink.href = window.location.href;
+  installAppLink.href = "https://play.google.com/store/apps/details?id=prabin.timsina.p2plocation";
+</script>
+</body>
+</html>
