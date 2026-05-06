@@ -5,7 +5,7 @@
     ],
     "target": {
       "namespace": "android_app",
-      "package_name": "prabin.timsina.p2plocation",
+      "package_name": "prabin.timsina.p2plocation.debug",
       "sha256_cert_fingerprints": [
         "EB:35:F3:6E:28:69:F6:4D:40:ED:FD:C2:BC:54:D5:54:01:55:F5:AD:10:97:A3:52:49:EA:7D:FE:BF:35:AC:B4"
       ]
