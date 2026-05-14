@@ -112,7 +112,11 @@
     codeElement.textContent = "Join code: " + code;
   }
 
-  openAppLink.href = window.location.href;
+  const intentUrl = "intent://prabint.github.io/p2p-location/join/?code=" + encodeURIComponent(code) +
+    "#Intent;scheme=https;package=prabin.timsina.p2plocation;" +
+    "S.browser_fallback_url=" + encodeURIComponent("https://play.google.com/store/apps/details?id=prabin.timsina.p2plocation") +
+    ";end";
+  openAppLink.href = intentUrl;
   installAppLink.href = "https://play.google.com/store/apps/details?id=prabin.timsina.p2plocation";
 </script>
 </body>

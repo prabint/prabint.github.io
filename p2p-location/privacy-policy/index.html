@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | P2P Location</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f1e7;
+      --panel: #fffdf9;
+      --text: #1e1d1a;
+      --muted: #6a655c;
+      --accent: #0b6e4f;
+      --border: #d8d1c3;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background:
+        radial-gradient(circle at top, rgba(11, 110, 79, 0.10), transparent 32%),
+        linear-gradient(180deg, #f9f6ef 0%, var(--bg) 100%);
+      color: var(--text);
+      font: 16px/1.6 Georgia, serif;
+    }
+
+    main {
+      width: min(100%, 780px);
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 18px 50px rgba(35, 30, 20, 0.08);
+    }
+
+    h1, h2 {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      line-height: 1.05;
+    }
+
+    h2 {
+      margin-top: 28px;
+      font-size: 1.2rem;
+    }
+
+    p, li {
+      color: var(--muted);
+    }
+
+    p {
+      margin: 14px 0 0;
+    }
+
+    ul {
+      margin: 14px 0 0;
+      padding-left: 22px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .meta {
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+
+    a {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Last updated: May 8, 2026</p>
+  <p>
+    P2P Location is a two-person location sharing app. This Privacy Policy explains what information the app
+    processes, how it is used, and what choices you have.
+  </p>
+
+  <h2>Information the app processes</h2>
+  <ul>
+    <li>Location data that you choose to share during an active session.</li>
+    <li>Session data such as session IDs, session tokens, session expiration time, and connection state.</li>
+    <li>Basic app content you enter, such as session names or display names used for invitations.</li>
+    <li>Diagnostic and crash information through Firebase Crashlytics.</li>
+    <li>App analytics and remote configuration data through Firebase services.</li>
+  </ul>
+
+  <h2>How location sharing works</h2>
+  <p>
+    The app is designed for private, person-to-person location sharing between two devices. When a session is active,
+    your device may send location updates directly to the other participant using a peer-to-peer WebRTC connection.
+    The app's backend server is used mainly for signaling, which helps the two devices discover each other and
+    establish the connection.
+  </p>
+  <p>
+    Session links and codes are used so another person can join your session. Anyone with a valid invite link or code
+    may be able to request access to the session until it expires or is deleted.
+  </p>
+  <p>
+    The app is intended so that your live location remains private to the participant you choose to share with. The
+    signaling server is not designed to carry or store live location payloads during normal operation.
+  </p>
+
+  <h2>What is stored on your device</h2>
+  <p>
+    The app stores session information locally on your device so sessions can be restored, displayed in the app, and
+    managed after creation or joining. This local information may include:
+  </p>
+  <ul>
+    <li>session IDs and session tokens,</li>
+    <li>session names,</li>
+    <li>recent shared coordinates and timestamps,</li>
+    <li>session status and expiration details.</li>
+  </ul>
+
+  <h2>What is processed by backend services</h2>
+  <p>
+    The app uses backend services to create and join sessions and to coordinate peer-to-peer WebRTC connections. These
+    services may process session identifiers, temporary session tokens, and limited connection metadata needed to
+    establish a session.
+  </p>
+  <p>
+    Sessions are intended to expire automatically after their configured duration unless deleted earlier. The backend
+    is used mainly for session creation, joining, and signaling rather than as the primary transport for live location
+    updates.
+  </p>
+
+  <h2>Firebase services</h2>
+  <p>The app uses Firebase services, including:</p>
+  <ul>
+    <li>Firebase Crashlytics for crash reporting and diagnostics,</li>
+    <li>Firebase Analytics for usage analytics,</li>
+    <li>Firebase Remote Config for configuration values used by the app.</li>
+  </ul>
+  <p>
+    These services may collect device, app, and diagnostic information in accordance with Google's policies.
+  </p>
+
+  <h2>Permissions</h2>
+  <p>The app may request permissions such as:</p>
+  <ul>
+    <li>precise and approximate location,</li>
+    <li>background location,</li>
+    <li>notifications,</li>
+    <li>internet access.</li>
+  </ul>
+  <p>
+    These permissions are used to support location sharing, session management, and app notifications.
+  </p>
+
+  <h2>How your information is used</h2>
+  <ul>
+    <li>To create, join, and manage location sharing sessions.</li>
+    <li>To transmit location updates between session participants.</li>
+    <li>To show session state, recent activity, and connection status in the app.</li>
+    <li>To troubleshoot crashes, improve reliability, and operate the service.</li>
+  </ul>
+
+  <h2>Data sharing</h2>
+  <p>
+    Your shared location is intended to be visible to the other participant in the session. The app also uses service
+    providers such as Firebase and backend infrastructure needed to operate the app.
+  </p>
+
+  <h2>Data retention</h2>
+  <p>
+    Session data may remain on your device until you delete it or clear app data. Backend session data is intended to
+    be temporary and may be removed when a session expires or is deleted.
+  </p>
+
+  <h2>Your choices</h2>
+  <ul>
+    <li>You can choose whether to grant location and notification permissions.</li>
+    <li>You can stop using the app, delete sessions, or uninstall the app.</li>
+    <li>You can manage some permissions at any time in your device settings.</li>
+  </ul>
+
+  <h2>Children's privacy</h2>
+  <p>
+    P2P Location is not intended for children under 13, and the app is not knowingly designed to collect personal
+    information from children under 13.
+  </p>
+
+  <h2>Changes to this policy</h2>
+  <p>
+    This Privacy Policy may be updated from time to time. The updated version will be posted on this page with a new
+    effective date.
+  </p>
+
+  <p><a href="/p2p-location/">Back to home</a></p>
+</main>
+</body>
+</html>

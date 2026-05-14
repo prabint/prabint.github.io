@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Usage Guide | P2P Location</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f1e7;
+      --panel: #fffdf9;
+      --text: #1e1d1a;
+      --muted: #6a655c;
+      --accent: #0b6e4f;
+      --border: #d8d1c3;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background:
+        radial-gradient(circle at top, rgba(11, 110, 79, 0.10), transparent 32%),
+        linear-gradient(180deg, #f9f6ef 0%, var(--bg) 100%);
+      color: var(--text);
+      font: 16px/1.6 Georgia, serif;
+    }
+
+    main {
+      width: min(100%, 780px);
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 18px 50px rgba(35, 30, 20, 0.08);
+    }
+
+    h1, h2 {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      line-height: 1.05;
+    }
+
+    h2 {
+      margin-top: 28px;
+      font-size: 1.2rem;
+    }
+
+    p, li {
+      color: var(--muted);
+    }
+
+    p {
+      margin: 14px 0 0;
+    }
+
+    ol, ul {
+      margin: 14px 0 0;
+      padding-left: 22px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    a {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>App Usage Guide</h1>
+  <p>
+    This page gives a simple overview of how P2P Location works. It is intentionally brief so it stays accurate even
+    as the app interface changes over time.
+  </p>
+
+  <h2>How it works</h2>
+  <ol>
+    <li>One person creates a sharing session.</li>
+    <li>The session owner shares the invite link or join code with another person.</li>
+    <li>The other person opens the link in the app and joins the session.</li>
+    <li>Both people allow the permissions needed for location sharing.</li>
+    <li>Once connected, live location can be shared between the two participants.</li>
+  </ol>
+
+  <h2>Requirements</h2>
+  <ul>
+    <li>Both participants need the app installed.</li>
+    <li>Location services should be enabled on the device.</li>
+    <li>The app may require foreground, background, or notification permissions depending on the device and Android version.</li>
+    <li>An internet connection is needed to create or join a session.</li>
+  </ul>
+
+  <h2>Troubleshooting</h2>
+  <ul>
+    <li>If the invite link opens in the browser, try opening it again after the app is installed.</li>
+    <li>If location is not updating, check app permissions and device location settings.</li>
+    <li>If the session no longer works, it may have expired or been deleted.</li>
+    <li>If connection fails, retry from inside the app or create a new session.</li>
+  </ul>
+
+  <h2>Stopping sharing</h2>
+  <p>
+    You can stop participating in a session at any time by leaving it or deleting it, depending on your role in the
+    session.
+  </p>
+
+  <p><a href="/p2p-location/">Back to home</a></p>
+</main>
+</body>
+</html>
